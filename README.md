@@ -1,5 +1,3 @@
-# Nikel-Growdev
-
 <h1 align="center"> Nikel </h1>
 <p align="center"> Growdev. </p>
 <br>
