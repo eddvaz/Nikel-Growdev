@@ -77,8 +77,17 @@ function getTransactions() {
     document.getElementById("transactions-list").innerHTML = transactionsHtml;
 }
 
-
-
 function saveData(data) {
     localStorage.setItem(data.login, JSON.stringify(data))
+}
+
+// Logout
+
+document.getElementById("button-logout").addEventListener("click", logout);
+
+function logout(){
+    sessionStorage.removeItem("logged");
+    localStorage.removeItem("session");
+
+    window.location.href = "index.html";
 }

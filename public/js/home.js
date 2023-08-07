@@ -33,7 +33,6 @@ function checkLogged() {
     getTotal();
 }
 
-
 // Lançamentos na Página inicial
 
 document.getElementById("transaction-form").addEventListener("submit", function(e) {
@@ -153,8 +152,17 @@ function getTotal() {
     document.getElementById("total").innerHTML = `R$ ${total.toFixed(2)}`
 }
 
-
-
 function saveData(data) {
     localStorage.setItem(data.login, JSON.stringify(data))
+}
+
+// Logout
+
+document.getElementById("button-logout").addEventListener("click", logout);
+
+function logout(){
+    sessionStorage.removeItem("logged");
+    localStorage.removeItem("session");
+
+    window.location.href = "index.html";
 }
